@@ -1,8 +1,0 @@
-Terningekastv2 todo:
-implementer graph, som sammenligner Frekvens i statistik ved forskellige total værdiger
-
-graph:
-
-total = den højeste værdi, som bliver testet
-lav ny list, kaldet number2, som er en 10ende del mindre end total, og test igen. Saml data for begge, og plot dem ind i en graf, hvor x-aksen representere 'total', og y-aksen representere afvigelse i procent. 
-
