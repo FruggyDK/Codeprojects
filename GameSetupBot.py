@@ -1,5 +1,6 @@
 #!/usr/bin/python3.6.7
 # -*- coding: utf-8 -*-
+#author FruggyDK
 
 #imports
 from selenium import webdriver
