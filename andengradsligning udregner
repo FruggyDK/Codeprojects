@@ -8,19 +8,30 @@ def andengradsligning(a, b, c, bool):
     else:
         diskriminanten = pow(b, 2) - (4*a*c)
         if bool == True:
-        	print(diskriminanten)
+            print("diskriminanten =", diskriminanten)
         if diskriminanten == 0:
-            print("Der er en løsning for x:")
-            return (-b / (2*a))
+            x1 = (-b / (2*a))
+            if bool == True:
+                print("Der er en løsning for x :",x1)
+            else:
+                return x1
         elif diskriminanten > 0:
-            print("der er to løsninger for x")
-            return (-b + math.sqrt(diskriminanten)) / (2*a), (-b - math.sqrt(diskriminanten)) / (2*a)
+            x1 = (-b + math.sqrt(diskriminanten)) / (2*a)
+            x2 = (-b - math.sqrt(diskriminanten)) / (2*a)
+            if bool == True:
+                print("der er to løsninger for x :", x1,",", x2)
+            else:
+                return x1, x2
+            
         else: #diskriminanten < 0
-            print("Der er ingen løsninger for x")
-
+            if bool == True:
+                print("Der er ingen løsninger for x")
 
 print('''Andengradsudregner - lavet af Christian k. Larsen
-formel for andegradsligningen: ax^2 + bx +c = 0, hvor c ≠ 0''')
+formel for andegradsligningen: ax^2 + bx +c = 0, hvor c ≠ 0
+''')
+
+print("Ligning = ",a,'x^2',' +',b,'x',' +', c)
 
 a = float(input('''indtast a
 -> '''))
@@ -29,13 +40,12 @@ b = float(input('''indtast b
 c = float(input('''indtast c
 -> '''))
 
-#graphing
 #x = np.linspace(-10, 10, 10000) 
   
 # calculate the y value for each element of the x vector 
 #y = pow(a * x,2) + b*x + c   
 
-løsning = andengradsligning(a, b, c,True)
+løsning = andengradsligning(a, b, c, True)
 #text = str('løsninger for x : ' + løsning)
 #fig, ax = plt.subplots() 
 ##plt.title(text)
