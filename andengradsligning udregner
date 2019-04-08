@@ -1,0 +1,50 @@
+import matplotlib.pyplot as plt 
+import numpy as np 
+import math 
+
+def andengradsligning(a, b, c, bool):
+    if a == 0:
+        print("a kan ikke være 0, hvis a er = 0, så er det en retlinje")
+    else:
+        diskriminanten = pow(b, 2) - (4*a*c)
+        if bool == True:
+        	print(diskriminanten)
+        if diskriminanten == 0:
+            print("Der er en løsning for x:")
+            return (-b / (2*a))
+        elif diskriminanten > 0:
+            print("der er to løsninger for x")
+            return (-b + math.sqrt(diskriminanten)) / (2*a), (-b - math.sqrt(diskriminanten)) / (2*a)
+        else: #diskriminanten < 0
+            print("Der er ingen løsninger for x")
+
+
+print('''Andengradsudregner - lavet af Christian k. Larsen
+formel for andegradsligningen: ax^2 + bx +c = 0, hvor c ≠ 0''')
+
+a = float(input('''indtast a
+-> '''))
+b = float(input('''indtast b
+-> '''))
+c = float(input('''indtast c
+-> '''))
+
+#graphing
+#x = np.linspace(-10, 10, 10000) 
+  
+# calculate the y value for each element of the x vector 
+#y = pow(a * x,2) + b*x + c   
+
+løsning = andengradsligning(a, b, c,True)
+#text = str('løsninger for x : ' + løsning)
+#fig, ax = plt.subplots() 
+##plt.title(text)
+#ax.plot(x, y) 
+#plt.grid(True)
+#plt.show()
+
+#add the answer to the plot  
+
+print(løsning)
+
+#vis den løste formel
