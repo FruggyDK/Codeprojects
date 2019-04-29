@@ -1,0 +1,3 @@
+Program til at udvælge x antal elever tilfældigt fra en liste, hvor eleven som blev trukket bliver fjernet fra listen(eller gemt
+i en ny liste, hvor vi kan sammeligne de to senere) og ændringerne bliver gemt i en txt fil, som loades op hver gang programmet 
+køres, så listen er up-to-date
